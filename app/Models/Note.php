@@ -17,6 +17,7 @@ class Note extends Model
         'send_date',
         'is_published',
         'heart_count',
+        'recipient'
     ];
 
     public function user():BelongsTo

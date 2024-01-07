@@ -23,4 +23,13 @@ Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
 
+Route::middleware('auth')->group(function (){
+    Route::view('notes', 'notes.index')
+        ->name('notes.index');
+    Route::view('notes/create', 'notes.create')
+        ->name('notes.create');
+
+});
+
+
 require __DIR__.'/auth.php';
